@@ -17,7 +17,7 @@ const onInputChange = function (event) {
 
         return (inputLabelName.textContent = event.currentTarget.value);
 
-
+    inputLabelName.textContent = nameWithEmptyInput;
 };
 
 input.addEventListener('input', onInputChange);

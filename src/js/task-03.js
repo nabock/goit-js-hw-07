@@ -34,13 +34,12 @@ listGalary.classList.add("list-gallery")
 
 
 
-const makeListGallary = ({ alt, url }) => {
-    const imageEl = document.createElement('li')
-    imageEl.insertAdjacentHTML('beforeend', `<img class="photo" src=${url} alt="${alt}">`)
-    return imageEl
-};
+const makeListGallary = ({ alt, url }) =>
 
-const listImageItem = images.map(makeListGallary)
-listGalary.append(...listImageItem)
+    `<li class="item"><img src="${url}" alt="${alt}" class="photo"></li>`;
 
-console.log(listGalary);
+
+
+const listImageItem = images.map(img => makeListGallary(img)).join('');
+
+listGalary.insertAdjacentHTML('afterbegin', listImageItem)
