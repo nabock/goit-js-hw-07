@@ -10,19 +10,3 @@
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
-const colorRandom = () => Math.floor(Math.random() * 256);
-
-const inputNumber = document.querySelector('#controls input');
-
-const boxesContainer = document.querySelector('#boxes');
-
-const btns = document.querySelectorAll('button');
-
-
-const newBox = [];
-
-let primarySize = 30;
-
-const destroyBoxes = () => {
-    boxesContainer.innerHTML = '';
-};
